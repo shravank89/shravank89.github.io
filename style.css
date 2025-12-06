@@ -2,7 +2,7 @@
 body, h1, h2, h3, p, a {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 body {
@@ -44,7 +44,7 @@ nav a:hover,
 }
 
 .hero h2 {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .highlight {
@@ -52,14 +52,15 @@ nav a:hover,
 }
 
 .subtitle {
-  font-size: 20px;
-  opacity: 0.8;
-  margin: 10px 0;
+  font-size: 24px;
+  opacity: 0.9;
+  margin: 12px 0;
+  padding: 8px 15px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 25px;
+  padding: 12px 20px;
   background: #00b3ff;
   color: white;
   border-radius: 6px;
@@ -70,25 +71,25 @@ nav a:hover,
 
 .btn:hover {
   background: #0095d9;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
 /* -------- CONTENT SECTION -------- */
 .content {
   max-width: 800px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 20px 20px;
 }
 
 /* -------- GRID -------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
 }
 
 .card {
-  background: white;
+  background: rgb(248, 225, 225);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -153,4 +154,85 @@ nav a:hover,
   .hero h2 {
     font-size: 32px;
   }
+}
+
+/* ---------------- VIDEO PORTFOLIO GRID ---------------- */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.video-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* ----- MOBILE ----- */
+
+@media (max-width: 900px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Profile image in header */
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #00b3ff;
+}
+
+.home-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #00b3ff;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Home Page Embedded Video */
+.home-video {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-video video,
+.home-video iframe {
+  width: 95%;
+  max-width: 720px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px;
 }
